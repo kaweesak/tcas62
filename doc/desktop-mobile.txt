@@ -1,0 +1,65 @@
+<style>
+.main-outer-mobile{display:none;}
+@media only screen and (max-width:768px){
+.main-outer-mobile{display:block;}
+.main-outer-desktop{display:none;}
+}
+
+
+</style>
+
+<div class="main-outer-desktop">
+<div id="1">DIV 1 </div>
+<div id="2">DIV 2 </div>
+</div>
+
+<div class="main-outer-mobile">
+<div id="2">DIV 2 </div>
+<div id="1">DIV 1 </div>
+</div>
+
+=================
+.container div {
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}
+
+.one { background: red; }
+.two { background: orange; }
+.three { background: yellow; }
+.four { background: green; }
+.five { background: blue; }
+
+@media screen and (max-width: 531px) {
+    .container { display: flex; flex-flow: column; }
+    .five { order: 1; }
+    .four { order: 2;  }
+    .three { order: 3; }
+    .two { order: 4; }
+    .one { order: 5 }
+}
+<div class="container">
+    <div class="one">I'm first</div>
+    <div class="two">I'm second</div>
+    <div class="three">I'm third</div>
+    <div class="four">I'm fourth</div>
+    <div class="five">I'm fifth</div>
+</div>
+
+===============================
+.container div {
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}
+
+.one { background: red; }
+.two { background: orange; }
+.three { background: yellow; }
+.four { background: green; }
+.five { background: blue; }
+
+@media screen and (max-width: 531px) {
+    .container { display: flex; flex-flow: column-reverse; }
+=======================
